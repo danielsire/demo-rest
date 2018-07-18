@@ -1,0 +1,42 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: danielsire
+      changes:
+        - createTable:
+            tableName: person
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(255)
+              - column:
+                  name: createsAt
+                  type: TIMESTAMP
+                  defaultValue: CURRENT_TIMESTAMP
+                  constraints:
+                    nullable: false      
+  - changeSet:
+      id: 2
+      author: danielsire
+      changes:
+        - insert:
+            tableName: person
+            columns:
+              - column:
+                  name: name
+                  value: Daniel
+              - column:
+                  name: email
+                  value: emai@test.com
