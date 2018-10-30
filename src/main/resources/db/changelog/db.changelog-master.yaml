@@ -22,7 +22,7 @@ databaseChangeLog:
                   name: email
                   type: varchar(255)
               - column:
-                  name: createsAt
+                  name: created_at
                   type: TIMESTAMP
                   defaultValue: CURRENT_TIMESTAMP
                   constraints:
